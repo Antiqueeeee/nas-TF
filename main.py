@@ -50,10 +50,10 @@ def get_media_files(directory):
 
 # 创建Gradio界面
 with gr.Blocks(title=INDEX_TITLE) as demo:
+    gr.Markdown(INDEX_MARKDOWN)
     with gr.Tabs():
         # 第一个标签页：文件上传
         with gr.TabItem("文件上传", id="upload"):
-            gr.Markdown(INDEX_MARKDOWN)
             with gr.Row():
                 file_input = gr.File(label="上传文件", file_count="multiple")  # 支持多文件上传
                 submit_button = gr.Button("上传")
